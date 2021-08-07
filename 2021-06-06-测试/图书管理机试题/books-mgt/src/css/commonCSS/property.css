@@ -1,0 +1,165 @@
+/*
+ * 面向属性的 CSS
+ */
+
+
+/* 布局方式 */
+
+.dpflex {
+    display: flex;
+}
+
+.dpnone {
+    display: none;
+}
+
+.flex1 {
+    flex: 1
+}
+
+.fdc {
+    flex-direction: column
+}
+
+
+/* 盒模型 */
+
+.mt0 {
+    margin-top: 0;
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.mt6 {
+    margin-top: 6px;
+}
+
+.mt8 {
+    margin-top: 8px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt16 {
+    margin-top: 16px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+.mt60 {
+    margin-top: 60px;
+}
+
+.mr16 {
+    margin-right: 16px;
+}
+
+.mb16 {
+    margin-bottom: 16px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+.mb5 {
+    margin-bottom: 5px;
+}
+
+.ml5 {
+    margin-left: 5px;
+}
+
+.ml12 {
+    margin-left: 12px;
+}
+
+.ml-80 {
+    margin-left: -80px;
+}
+
+.pd16 {
+    padding: 16px;
+}
+
+.pl8 {
+    padding-left: 8px;
+}
+
+
+/* 字号 */
+
+.fs12 {
+    font-size: 12px;
+}
+
+.fs14 {
+    font-size: 14px;
+}
+
+.fs16 {
+    font-size: 16px;
+}
+
+.fs18 {
+    font-size: 18px;
+}
+
+.fs20 {
+    font-size: 20px;
+}
+
+.fs34 {
+    font-size: 34px;
+}
+
+.fs40 {
+    font-size: 40px;
+}
+
+.fs48 {
+    font-size: 48px;
+}
+
+.fs60 {
+    font-size: 60px;
+}
+
+
+/* 加粗 */
+
+.fw {
+    font-weight: bold;
+}
+
+
+/* 颜色 */
+
+.c429 {
+    color: #4294FF;
+}
+
+.c8a8 {
+    color: #8A8A8A;
+}
+
+.c9a9 {
+    color: #9A9A9A;
+}
+
+.caad {
+    color: #AAD9F7;
+}
+
+.cfff {
+    color: #fff;
+}
