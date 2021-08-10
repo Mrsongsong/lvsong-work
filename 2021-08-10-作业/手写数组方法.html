@@ -1,0 +1,17 @@
+<script>
+    // indexOf功能实现
+    Array.prototype.myIndexOf = function (data) {
+        // 循环this arr数组
+        for (let a = 0; a < this.length; a++) {
+            // 传入data参数与arr里每个元素作比较
+            if (data == this[a]) {
+                // 如果满足条件返回对应的索引a的值
+                return a
+            }
+        }
+        // 不满足直接返回-1
+        return -1
+    }
+    let arr = [1, 45, 45, 485, 48, 78];
+    console.log(arr.myIndexOf(-1000));
+</script>

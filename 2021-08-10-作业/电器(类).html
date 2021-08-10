@@ -1,0 +1,18 @@
+<script>
+   // 电器（类）
+   function Ea(species, size, weight) {
+      this.species = species;
+      this.size = size
+      this.weight = weight
+   }
+   Ea.prototype.advantage = function (data) {
+      return data
+   }
+   let he = new Ea("海尔",2000,400)
+   let md = new Ea("美的",1800,300)
+   let gl = new Ea("格力",2500,400)
+   console.log(he,md,gl);
+   console.log(he.advantage("制冷快"));
+   console.log(md.advantage("省电"));
+   console.log(gl.advantage("重量轻"));
+</script>

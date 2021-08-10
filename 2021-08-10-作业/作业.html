@@ -1,0 +1,53 @@
+<script>
+    // 3.请写出下方代码执行后的5行输出结果，并：
+    // （1）写出各行执行时show()方法中的this指向；
+    // （2）写出每次show()中this.money与this.arr标识符最终从哪找到的值；
+    function Mom() {
+        this.money = 20
+        this.arr = []
+        this.show = function () {
+            console.log(this.money, this.arr)
+            console.log(this);
+        }
+    }
+
+
+    function Child() {
+        this.money = 10
+        this.change = function () {
+            this.arr.push(this.money--)
+            console.log(this);
+        }
+        // this.money = 20
+        // this.arr = []
+        // this.show = function () {
+        //     console.log(this.money, this.arr)
+        // }
+    }
+
+    Child.prototype = new Mom()
+    
+    const mom = new Mom()
+    const child1 = new Child()
+    const child2 = new Child()
+
+    child1.money = 5
+    child2.money = 6
+
+    mom.show() // 输出什么 20 [] 
+                // this指向实例对象Mom  构造函数Mom-this下挂载的属性和方法
+    child1.show() // 输出什么  5 [] 
+                // this指向实例对象Child   构造函数Child原型对象上挂载了Mom的实例对象，因为外面this.money重新赋值为5，相当于参数所以里面的this.money全等于5，this.arr = []，查找就近原则。
+
+    child1.change() 
+
+    mom.show() // 输出什么 20 [] 
+                // this指向实例对象Mom  构造函数Mom-this下挂载的属性和方法
+
+    child1.show() // 输出什么 4 [5] 
+                // this指向实例对象Child   调用child1.change()已经把原有的this.money=5加入了数组，在进行的--this.money在原有的5基础上已经减掉1了，所以等于4，。
+    child2.show() // 输出什么
+                // 输出什么 6 [5] 
+                // this指向实例对象Child 调用child1.change()已经把原有的this.money=5加入了数组,arr的值没变，最后重新赋值child2.money = 6，所以结果是6 [5]
+                
+// </script>
