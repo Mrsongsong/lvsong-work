@@ -1,0 +1,14 @@
+<script>
+    console.log(null == undefined); //true
+    //要比较相等性之前，不能将 null 和 undefined 转换成其他任何值，并且规定null 和 undefined 是相等的。null 和 undefined都代表着无效的值。
+    //全等于状态下，是false，。它们不属于同一数据类型。
+    console.log(typeof null === typeof ([])); //true
+    console.log(NaN === NaN);//false
+    console.log(typeof new String('str') === typeof function () { });//false
+    console.log(new String('str') instanceof String == 1);//true
+    // console.log(new String('str') instanceof String);
+    // console.log(new String('str'));
+    console.log(({}) == false);//false {} == ! {}   ->   {} == false  ->  {} == 0  ->   NaN == 0    ->  false
+    console.log({ name: "张三" } == { name: "张三" });//false
+    console.log([1,2] == [1,2]);//false
+</script>
