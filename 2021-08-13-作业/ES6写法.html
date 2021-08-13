@@ -1,0 +1,56 @@
+<script>
+    // function ChessPlayer(name, sex) {
+    //     this.name = name
+    //     this.sex = sex
+    //     this.from = '成都'
+    //     this.dish = ['蛋炒饭', '番茄炒蛋'] // 菜品
+    // }
+    // ChessPlayer.what = function () {
+    //     console.log('棋手就是下棋的选手。一般分为职业棋手和业余棋手，其实只要有下棋行为都可以称之为棋手。')
+    // }
+    // ChessPlayer.prototype.sayHi = function (anotherDish, language) {
+    //     const lan = language || 'JavaScript'
+    //     // 得到会做的菜品介绍字符串
+    //     let dishes = []
+    //     this.dish.forEach(function (item) {
+    //         dishes.push(item)
+    //     })
+    //     dishes.push(anotherDish)
+    //     const dishesStr = dishes.join('、')
+    //     console.log('Hi！大家好，我的名字是' + this.name)
+    //     console.log('我来自' + this.from)
+    //     console.log('我最喜欢的编程语言是' + lan)
+    //     console.log('我会做' + dishesStr)
+    // }
+    // const yuan = new ChessPlayer('源宝', 1)
+    // yuan.sayHi('红烧排骨')
+
+    // ES6写法
+    class ChessPlayer {
+        from = '成都'
+        dish = ['蛋炒饭', '番茄炒蛋'] // 菜品
+        constructor(name,sex) {
+            this.name = name
+            this.sex = sex
+        }
+        static what() {
+            console.log('棋手就是下棋的选手。一般分为职业棋手和业余棋手，其实只要有下棋行为都可以称之为棋手。')
+        }
+    }
+    ChessPlayer.prototype.sayHi = function (anotherDish, language) {
+        const lan = language || 'JavaScript'
+        // 得到会做的菜品介绍字符串
+        let dishes = []
+        this.dish.forEach(function (item) {
+            dishes.push(item)
+        })
+        dishes.push(anotherDish)
+        const dishesStr = dishes.join('、')
+        console.log('Hi！大家好，我的名字是' + this.name)
+        console.log('我来自' + this.from)
+        console.log('我最喜欢的编程语言是' + lan)
+        console.log('我会做' + dishesStr)
+    }
+    const yuan = new ChessPlayer('源宝', 1)
+    yuan.sayHi('红烧排骨')
+</script>
